@@ -24,7 +24,7 @@
 (defn parsed
   "Get value of input as sequence."
   []
-  (parseIntVector (.-value (dom/getElement "number-sequence"))))
+  (parseIntVector (.trim (.-value (dom/getElement "number-sequence")))))
 
 (defn get-mean
   "Return mean of input sequence"
@@ -60,4 +60,4 @@
   (dom/setTextContent (dom/getElement "median") (get-median (parsed)))
   (dom/setTextContent (dom/getElement "stdev") (get-stdev (parsed))))
 
-(events/listen (dom/getElement "show") "click" output)
+(events/listen (dom/getElement "number-sequence") "input" output)
