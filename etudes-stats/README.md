@@ -18,7 +18,7 @@ numbers:
 1. Input numbers separated by a space.
 3. Press the _Show statistics_ button to display the mean, median, and the standard deviation.
 
-![image](/images/image.png)
+![image](/etudes-stats/images/image.png)
 
 To fiddle with the namespace of `src/etudes/core.cljs`, run the following inside the REPL:
 
