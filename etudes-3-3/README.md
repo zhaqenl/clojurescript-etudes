@@ -1,13 +1,3 @@
-etudes-stats
-============
-
-
-Overview
---------
-
-This is a solution for both [Étude 3-3 and 3-4](http://catcode.com/etudes-for-clojurescript/ch03-lists-vectors.html).
-
-
 Usage
 -----
 

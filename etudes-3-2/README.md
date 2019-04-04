@@ -1,13 +1,3 @@
-etudes-julian
-=============
-
-
-Overview
---------
-
-This is a solution for [Étude 3-2: More List Manipulation](http://catcode.com/etudes-for-clojurescript/ch03-lists-vectors.html).
-
-
 Usage
 -----
 
