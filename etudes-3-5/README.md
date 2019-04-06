@@ -18,9 +18,16 @@ Inside the REPL, given the following definition of vector of vectors which corre
   [3 2 3 2 3 2]])
 ```
 
-run the following to get the index (1-based) of a bad tooth:
+run the following: 
 
 ```
 (in-ns 'etudes.core)
+
 (alert pocket-depths)
+```
+
+to get the index (1-based) of a bad tooth:
+
+```
+[9 11 25 26 29]
 ```

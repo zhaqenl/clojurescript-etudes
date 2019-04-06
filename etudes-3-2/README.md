@@ -9,7 +9,7 @@ and date:
 2. Input a date with a _yyyy-mm-dd_ format.
 3. Press the _Calculate_ button to display the amount of daylight in hours and minutes.
 
-![image](/etudes-julian/images/image.png)
+![image](/etudes-3-2/images/image.png)
 
 To fiddle with the namespace of `src/etudes/core.cljs`, run the following inside the REPL:
 
