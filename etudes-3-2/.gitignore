@@ -12,4 +12,3 @@ pom.xml
 .lein-plugins/
 .repl
 .nrepl-port
-*.*~

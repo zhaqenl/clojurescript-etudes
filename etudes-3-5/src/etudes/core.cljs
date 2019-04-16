@@ -1,20 +1,4 @@
-(ns etudes.core
-    (:require ))
-
-(enable-console-print!)
-
-(println "This text is printed from src/etudes/core.cljs. Go ahead and edit it and see reloading in action.")
-
-;; define your app data so that it doesn't get over-written on reload
-
-(defonce app-state (atom {:text "Hello world!"}))
-
-
-(defn on-js-reload []
-  ;; optionally touch your app-state to force rerendering depending on
-  ;; your application
-  ;; (swap! app-state update-in [:__figwheel_counter] inc)
-)
+(ns etudes.core)
 
 (def pocket-depths
   [[], [2 2 1 2 2 1], [3 1 2 3 2 3],
