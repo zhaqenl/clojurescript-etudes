@@ -1,6 +1,7 @@
 (ns etudes.core
   (:require
-   [cljs.nodejs :as nodejs]))
+   [cljs.nodejs :as nodejs]
+   [clojure.pprint :as pp]))
 
 (enable-console-print!)
 
@@ -53,4 +54,4 @@
   "Merge the condiment’s food partners inside a vector"
   (reduce (partial merge-with into) condiment-food-map))
 
-(println merged-condiment-food)
+(pp/pprint merged-condiment-food)

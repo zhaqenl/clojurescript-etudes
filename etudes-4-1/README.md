@@ -7,6 +7,8 @@ The output of the `node`-step is a Clojure map that represents the condiments
 with their respective vectors, containing the foods which go along with the
 condiments.
 
+![image](/etudes-4-1/images/image.png)
+
 
 # Production Builds
 
