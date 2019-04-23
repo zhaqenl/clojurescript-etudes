@@ -1,6 +1,6 @@
 (defproject etudes "0.1.0-SNAPSHOT"
-  :description "FIXME: write this!"
-  :url "http://example.com/FIXME"
+  :description "This is a solution for etudes 3-2"
+  :url "http://catcode.com/etudes-for-clojurescript/ch03-lists-vectors.html#ETUDE03-02"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 

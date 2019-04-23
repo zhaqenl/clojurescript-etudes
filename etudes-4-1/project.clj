@@ -1,6 +1,6 @@
 (defproject etudes "0.1.0-SNAPSHOT"
-  :description "FIXME: write this!"
-  :url "http://example.com/FIXME"
+  :description "This is a solution for etudes 4-1"
+  :url "http://catcode.com/etudes-for-clojurescript/ch04-maps.html#ETUDE04-01"
 
   :min-lein-version "2.7.1"
 
