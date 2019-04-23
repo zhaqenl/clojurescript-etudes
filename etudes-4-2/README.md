@@ -14,7 +14,7 @@
 
 After successfully running `node` against the compiled file(s):
 
-1. Open a browser window then go to [localhost:3000](localhost:3000)
+1. Open a browser window then go to [localhost:3000](http://localhost:3000)
 2. Choose a condiment from the drop-down list
 3. Click the submit button
 
