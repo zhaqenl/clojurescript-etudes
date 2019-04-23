@@ -18,9 +18,9 @@ After successfully running `node` against the compiled file(s):
 2. Choose a condiment from the drop-down list
 3. Click the submit button
 
-![image](/etudes-4-2/images/image-1.png)
-![image](/etudes-4-2/images/image-2.png)
-![image](/etudes-4-2/images/image-3.png)
+- ![image](/etudes-4-2/images/image-1.png)
+- ![image](/etudes-4-2/images/image-2.png)
+- ![image](/etudes-4-2/images/image-3.png)
 
 
 # REPL Usage (Vim)
