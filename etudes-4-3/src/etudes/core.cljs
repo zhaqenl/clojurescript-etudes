@@ -56,9 +56,9 @@
 (defn unique-column-values
   "Return vector of unique column values"
   [processed-csv column]
-  (let [for-count (map (fn [arg] (column arg)) processed-csv)
-        unique-values (into [] (sort (set for-count)))]
-    [for-count unique-values]))
+  (let [raw-values (map (fn [arg] (column arg)) processed-csv)
+        unique-values (into [] (sort (set raw-values)))]
+    [raw-values unique-values]))
 
 (defn count-occurrence
   "Count occurrences of element inside sequence"
@@ -79,6 +79,6 @@
 (defn frequency-table
   "Return a vector with 2 elements--unique column values, respective counts, and the total"
   [processed-csv column]
-  (let [[for-count unique-values] (unique-column-values processed-csv column)
-        counted-map (into [] (map-count unique-values for-count))]
+  (let [[raw-values unique-values] (unique-column-values processed-csv column)
+        counted-map (into [] (map-count unique-values raw-values))]
     [unique-values counted-map (apply + counted-map)]))
