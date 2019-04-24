@@ -24,9 +24,8 @@
     (butlast str)
     str))
 
-(defn generate-condiments
+(def condiments-element
   "Generate select vector, with options, containing the condiments"
-  []
   (let [sorted-condiments (sort (for [k food-map] (k 0)))]
     [:select
      {:id "condimentMenu" :name "selected"}
@@ -54,9 +53,9 @@
    [:body
     [:p "Condiment name: "]
     [:form {:action "/"} 
-       (generate-condiments)
-       [:input {:type "submit" :value "Submit"}]
-       (generate-food-list request.query.selected)]]))
+     condiments-element
+     [:input {:type "submit" :value "Submit"}]
+     (generate-food-list request.query.selected)]]))
 
 (defn send-response [request response]
   "Callback function that sends back html structure as string"
