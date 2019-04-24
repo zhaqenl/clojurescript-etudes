@@ -60,12 +60,17 @@
         unique-values (into [] (sort (set for-count)))]
     [for-count unique-values]))
 
-(defn count-occ
+(defn count-occurrence
   "Count occurrences of element inside sequence"
   [element sequence]
   (let [same-word? (fn [word] (= word element))
         filtered (filter same-word? sequence)]
     (count filtered)))
+
+(defn map-count
+  "Count occurences of each unique-column-values"
+  [unique-values raw-values]
+  (map (fn [arg] (count-occurrence arg raw-values)) unique-values))
 
 ;;--------------------------------------------------------------------------------------------------
 ;; Main function
@@ -74,5 +79,6 @@
 (defn frequency-table
   "Return a vector with 2 elements--unique column values, respective counts, and the total"
   [processed-csv column]
-  (let [[for-count values] (unique-column-values processed-csv column)]
-    [values for-count]))
+  (let [[for-count unique-values] (unique-column-values processed-csv column)
+        counted-map (into [] (map-count unique-values for-count))]
+    [unique-values counted-map (apply + counted-map)]))
