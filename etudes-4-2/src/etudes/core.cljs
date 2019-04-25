@@ -24,15 +24,6 @@
     (butlast str)
     str))
 
-(def condiments-element
-  "Generate select vector, with options, containing the condiments"
-  (let [sorted-condiments (sort (for [k food-map] (k 0)))]
-    [:select
-     {:id "condimentMenu" :name "selected"}
-     [:option {:value ""} "Choose a condiment"]
-     (for [condiment sorted-condiments]
-       [:option {:value condiment} condiment])]))
-
 (defn generate-food-list
   "Generate div vector for hiccup-html"
   [condiment]
@@ -47,15 +38,23 @@
 (defn generate-page
   "Generate html structure as string"
   [request]
-  (html5
-   [:head
-    [:title "Etudes 4-2"]]
-   [:body
-    [:p "Condiment name: "]
-    [:form {:action "/"} 
-     condiments-element
-     [:input {:type "submit" :value "Submit"}]
-     (generate-food-list request.query.selected)]]))
+  (let [selected request.query.selected
+        sorted-condiments (sort (for [k food-map] (k 0)))]
+    (html5
+     [:head
+      [:title "Etudes 4-2"]]
+     [:body
+      [:p "Condiment name: "]
+      [:form {:action "/"} 
+       [:select
+        {:id "condimentMenu" :name "selected"}
+        [:option {:value ""} "Choose a condiment"]
+        (for [condiment sorted-condiments]
+          (if (= condiment selected)
+            [:option {:value "condiment" :selected "selected"} condiment]
+            [:option {:value condiment} condiment]))]
+       [:input {:type "submit" :value "Submit"}]
+       (generate-food-list selected)]])))
 
 (defn send-response [request response]
   "Callback function that sends back html structure as string"
