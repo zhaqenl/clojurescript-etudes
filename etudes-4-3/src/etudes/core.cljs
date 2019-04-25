@@ -1,5 +1,3 @@
-;; Incomplete!
-
 (ns etudes.core
   (:require [cljs.nodejs :as nodejs]
             [clojure.string :as str]
