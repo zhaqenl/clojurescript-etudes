@@ -32,7 +32,7 @@ You can now connect to Figwheel's REPL through
 1. `lein repl`
 2. `(fig-start)`
 3. `(cljs-repl)`
-4. (In another window) `node target\js\compiled\etudes.js ...`
+4. (In another window) `node target\js\compiled\etudes.js test.xml`
 5. (In Vim) `:Piggieback (figwheel-sidecar.repl-api/repl-env)`
 
 Standard `vim-fireplace` commands will now work in the context of the
