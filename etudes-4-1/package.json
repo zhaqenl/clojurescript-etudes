@@ -16,6 +16,6 @@
   },
   "devDependencies": {
     "source-map-support": "^0.4.15",
-    "ws": "^6.2.1"
+    "ws": "^7.4.6"
   }
 }
